@@ -1,0 +1,13 @@
+%h1 Items#new
+%p Find me in app/views/items/new.html.haml
+
+.logout
+  = link_to "ログアウト", destroy_user_session_path, method: :delete
+.login
+  = link_to "ログイン", new_user_session_path, class: "post"
+.signup
+  = link_to "新規登録", new_user_registration_path, class: "post"
+.form
+  = form_with model: @item, local: true do |f|
+    = f.text_field :name
+    = f.submit "sousin"
